@@ -1,6 +1,6 @@
 import UIKit
 
-// a variable that holds all the players in the league
+// individual player variables...
 
 var jSmith: [String: String] = ["Name": "Joe Smith", "Height": "42", "Experience": "Yes", "Guardian": "Jim and Jan Smith"]
 var jTanner: [String: String] = ["Name": "Jill Tanner", "Height": "36", "Experience": "Yes", "Guardian": "Clara Tanner"]
@@ -21,8 +21,7 @@ var pHelm: [String: String] = ["Name": "Phillip Helm", "Height": "44", "Experien
 var lClay: [String: String] = ["Name": "Les Clay", "Height": "42", "Experience": "Yes", "Guardian": "Wynonna Brown"]
 var hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "45", "Experience": "Yes", "Guardian": "Hyman and Rachel Krustofski"]
 
+// all players within the league are now stored within this one variable...
 
 var players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
 
-players.count
-players
