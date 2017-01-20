@@ -1,6 +1,6 @@
 import UIKit
 
-// individual player variables...
+// individual player variables are stored into their own dictionary
 
 var jSmith: [String: String] = ["Name": "Joe Smith", "Height": "42", "Experience": "Yes", "Guardian": "Jim and Jan Smith"]
 var jTanner: [String: String] = ["Name": "Jill Tanner", "Height": "36", "Experience": "Yes", "Guardian": "Clara Tanner"]
@@ -21,7 +21,21 @@ var pHelm: [String: String] = ["Name": "Phillip Helm", "Height": "44", "Experien
 var lClay: [String: String] = ["Name": "Les Clay", "Height": "42", "Experience": "Yes", "Guardian": "Wynonna Brown"]
 var hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "45", "Experience": "Yes", "Guardian": "Hyman and Rachel Krustofski"]
 
-// all players within the league are now stored within this one variable...
-
+// all players within the league are now stored within this one array
 var players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
+
+// variables holding the players for each team
+var dragons: [String] = []
+var sharks: [String] = []
+var raptors: [String] = []
+
+// variables holding the players who have expereince with soccer vs those that do not
+var experience: [String] = []
+var noExpereience: [String] = []
+
+// logic that sorts all players into two groups, those with expereicnce and those that have never played before
+
+
+
+//Create logic that can iterate through all 18 players and assign them to teams such that the number of experienced players on each team are the same. Store each team’s players in its own new collection variable for use in Part 3. (Please note: your logic should work correctly regardless of the initial ordering of the players and should work, if we theoretically had more or less than 18 players, so NO MAGIC NUMBERS!)
 
