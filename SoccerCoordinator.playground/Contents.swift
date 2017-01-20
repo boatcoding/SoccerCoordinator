@@ -22,4 +22,7 @@ var lClay: [String: String] = ["Name": "Les Clay", "Height": "42", "Experience":
 var hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "45", "Experience": "Yes", "Guardian": "Hyman and Rachel Krustofski"]
 
 
+var players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
 
+players.count
+players
