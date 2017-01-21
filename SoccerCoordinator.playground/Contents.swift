@@ -37,8 +37,10 @@ var noExpereience: [AnyObject] = []
 
 for player in players {
     if player["Experience"] == "Yes" {
-        print(player)
+        experience.append(player as AnyObject)
     } else {
-        print("wrong")
+        noExpereience.append(player as AnyObject)
     }
 }
+print(experience)
+print(noExpereience)
