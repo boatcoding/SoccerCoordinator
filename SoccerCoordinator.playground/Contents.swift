@@ -30,12 +30,15 @@ var sharks = [String:String]()
 var raptors = [String:String]()
 
 // variables holding the players who have expereince with soccer vs those that do not
-var experience = [String:String]()
-var noExpereience = [String:String]()
+var experience: [AnyObject] = []
+var noExpereience: [AnyObject] = []
 
 // logic that sorts all players into two groups, those with expereicnce and those that have never played before
 
 for player in players {
-    let exper = ("\(player["Experience"])")
-    print(exper)
+    if player["Experience"] == "Yes" {
+        print(player)
+    } else {
+        print("wrong")
+    }
 }
