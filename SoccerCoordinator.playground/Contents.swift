@@ -22,11 +22,11 @@ let lClay: [String: String] = ["Name": "Les Clay", "Height": "42", "Experience":
 let hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "45", "Experience": "Yes", "Guardian": "Hyman and Rachel Krustofski"]
 
 // all players within the league are now stored within this one array
-var players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
+let players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
 
 // variables holding the players for each team
 var dragons = [String:String]()
-var sharks = [String:String]()
+var sharks: [AnyObject] = []
 var raptors = [String:String]()
 
 // variables holding the players who have expereince with soccer vs those that do not
@@ -41,14 +41,18 @@ for player in players {
         noExpereience.append(player as AnyObject)
     }
 }
-// logic that sorts the experienced players into the three teams
-while experience.count > 0 {
-    if dragons.count > sharks.count {
-        experience.append(players)
-    }
-}
 
-//while counter < 1 {
-//    print("I'm inside the while loop")
-//    counter += 1
-//}
+
+
+// logic that seperates the experienced players into three teams
+var counter = experience.count
+while counter > 0 {
+    dragons.append(experience)
+    sharks.append(experience)
+    raptors.append(experience)
+    counter -= 1
+}
+dragons.count
+sharks.count
+raptors.count
+
