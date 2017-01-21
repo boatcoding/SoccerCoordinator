@@ -42,5 +42,5 @@ for player in players {
         noExpereience.append(player as AnyObject)
     }
 }
-print(experience)
-print(noExpereience)
+experience.count
+noExpereience.count
