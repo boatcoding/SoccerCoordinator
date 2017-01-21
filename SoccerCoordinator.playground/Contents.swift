@@ -36,7 +36,5 @@ var noExpereience = [String:String]()
 // logic that sorts all players into two groups, those with expereicnce and those that have never played before
 
 for player in players {
-    if (players.values == "Yes") {
-     print(player)
-    }
+    print("\(player["Experience"])")
 }
