@@ -25,9 +25,9 @@ let hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "4
 var players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
 
 // variables holding the players for each team
-var dragons: [String] = []
-var sharks: [String] = []
-var raptors: [String] = []
+var dragons = [String:String]()
+var sharks = [String:String]()
+var raptors = [String:String]()
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experience = [String:String]()
@@ -37,6 +37,6 @@ var noExpereience = [String:String]()
 
 for player in players {
     if (players.values == "Yes") {
-     print (player)
+     print(player)
     }
 }
