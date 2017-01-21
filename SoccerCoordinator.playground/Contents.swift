@@ -34,7 +34,6 @@ var experience: [AnyObject] = []
 var noExpereience: [AnyObject] = []
 
 // logic that sorts all players into two groups, those with expereicnce and those that have never played before
-
 for player in players {
     if player["Experience"] == "Yes" {
         experience.append(player as AnyObject)
@@ -42,5 +41,14 @@ for player in players {
         noExpereience.append(player as AnyObject)
     }
 }
-experience.count
-noExpereience.count
+// logic that sorts the experienced players into the three teams
+while experience.count > 0 {
+    if dragons.count > sharks.count {
+        experience.append(players)
+    }
+}
+
+//while counter < 1 {
+//    print("I'm inside the while loop")
+//    counter += 1
+//}
