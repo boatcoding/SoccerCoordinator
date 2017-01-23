@@ -45,12 +45,41 @@ for player in players {
 print(experience)
 
 // logic that sorts the expereinced players into three teams
-var count = experience.count
-dragons = [""]
-sharks = [""]
-raptors = [""]
-for playa in experience {
-    if dragons == [""]{
-        dragons.insert(<#T##newElement: Element##Element#>, at: 0)
-    }
+var counter = experience.count
+
+while counter < 0 {
+    
 }
+
+
+
+
+
+
+
+
+//// Repeat While
+//
+//var counter = 1
+//
+//while counter < 1 {
+//    print("I'm inside the while loop")
+//    counter += 1
+//}
+//
+//repeat {
+//    print("I'm inside the repeat loop!")
+//    counter += 1
+//} while counter < 1
+
+
+
+
+
+
+
+
+
+
+
+
