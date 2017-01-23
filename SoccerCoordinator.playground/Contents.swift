@@ -30,8 +30,8 @@ var sharks = [Any]()
 var raptors = [Any]()
 
 // variables holding the players who have expereince with soccer vs those that do not
-var experience : [Any] = []
-var noExperience : [Any] = []
+var experience: [Any] = []
+var noExperience: [Any] = []
 
 // logic that sorts all players into two groups, those with experience and those that have never played before
 
@@ -42,5 +42,3 @@ for player in players {
         noExperience.append(player)
     }
 }
-experience.count
-noExperience.count
