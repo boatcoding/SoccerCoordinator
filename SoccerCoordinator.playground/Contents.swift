@@ -25,9 +25,10 @@ let hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "4
 let players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
 
 // variables holding the players for each team
-var dragons: [AnyObject] = []
-var sharks: [AnyObject] = []
-var raptors: [AnyObject] = []
+var dragons: [String] = []
+var sharks: [String] = []
+var raptors: [String] = []
+var league = [dragons, sharks, raptors]
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experience: [AnyObject] = []
@@ -41,20 +42,13 @@ for player in players {
         noExpereience.append(player as AnyObject)
     }
 }
-
-// logic that seperates the experienced players into three teams
-var counter = experience.count
-while counter > 0 {
-    counter -= 1
+print(experience)
+var count = experience.count
+dragons = [""]
+sharks = [""]
+raptors = [""]
+for playa in experience {
+    if dragons == [""]{
+        dragons.insert(<#T##newElement: Element##Element#>, at: 0)
+    }
 }
-//so the questions is now, how do i...
-
-//add one to dragons and
-//    then if sharks is less than dragons add one
-//        and then if raptors is less than sharks add one
-//            and then repeat until counter is equal to zero or...?????! ;)
-
-
-dragons.count
-sharks.count
-raptors.count
