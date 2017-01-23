@@ -30,18 +30,19 @@ var sharks: [String: Any] = [:]
 var raptors: [String: Any] = [:]
 
 // variables holding the players who have expereince with soccer vs those that do not
-var experience: [String: Any] = [:]
-var noExpereience: [String: Any] = [:]
+var experience = 0
+var noExpereience = 0
 
 // logic that sorts all players into two groups, those with experience and those that have never played before
 
 for player in players {
-    if player["Experience"] as! Bool == true {
-        experience.addObject(player)
+    if player["Experience"] as! Bool == false {
+        experience.insert(player)
 } else {
-        noExpereience.addObject(player)
+        noExpereience.append(player)
 }
-
+experience.count
+noExpereience.count
 
 
 
