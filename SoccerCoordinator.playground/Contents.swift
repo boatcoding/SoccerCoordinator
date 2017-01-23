@@ -25,10 +25,10 @@ let hKrustofski: [String: String] = ["Name": "Herschel Krustofski", "Height": "4
 let players = [jSmith, jTanner, bBon, eGordon, mGill, kStein, sAdams, kSaygan, sGreenberg, sDali, jKavalier, bFinkelstein, dSoto, cAlaska, aWillis, pHelm, lClay, hKrustofski]
 
 // variables holding the players for each team
-var dragons: [String] = []
+var dragons: [AnyObject] = []
 var sharks: [String] = []
 var raptors: [String] = []
-var league = [dragons, sharks, raptors]
+var league = [dragons, sharks, raptors] as [Any]
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experience: [AnyObject] = []
@@ -47,14 +47,17 @@ print(experience)
 // logic that sorts the expereinced players into three teams
 var counter = experience.count
 
-while counter < 0 {
-    
+while counter > 0 {
+    dragons.insert(experience[0] as AnyObject, at: 0)
+    sharks.insert(experience[1] as AnyObject, at: 1)
+    raptors.insert(experience[2] as AnyObject, at: 2)
+    counter -= 1
 }
 
 
-
-
-
+dragons.count
+sharks.count
+print (dragons)
 
 
 
