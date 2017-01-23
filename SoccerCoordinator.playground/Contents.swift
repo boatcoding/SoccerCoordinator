@@ -43,6 +43,8 @@ for player in players {
     }
 }
 print(experience)
+
+// logic that sorts the expereinced players into three teams
 var count = experience.count
 dragons = [""]
 sharks = [""]
