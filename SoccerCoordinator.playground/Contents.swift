@@ -31,7 +31,7 @@ var raptors = [Any]()
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experience : [Any] = []
-var noExpereience : [Any] = []
+var noExperience : [Any] = []
 
 // logic that sorts all players into two groups, those with experience and those that have never played before
 
@@ -39,7 +39,7 @@ for player in players {
     if player["Experience"] as! Bool == true {
        experience.append(player)
     } else {
-        noExpereience.append(player)
+        noExperience.append(player)
     }
 }
 
