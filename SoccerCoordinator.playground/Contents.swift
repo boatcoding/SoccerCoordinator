@@ -59,27 +59,30 @@ while counter > 0 {
     counter -= 3
 }
 
-// logic that adds the height of the players for each team
+// logic that adds the average height of the players for each team
 var dragonsTotalHeight = 0
 for height in dragons {
     var dragonHeight = (dragons[0]["Height"] as! Int)
     dragonsTotalHeight += dragonHeight
 }
-print(dragonsTotalHeight)
+var dragonsAverageHeight = dragonsTotalHeight / dragons.count
+print(dragonsAverageHeight)
 
 var sharksTotalHeight = 0
 for height in sharks {
     var sharksHeight = (sharks[0]["Height"] as! Int)
     sharksTotalHeight += sharksHeight
 }
-print(sharksTotalHeight)
+var sharksAverageHeight = sharksTotalHeight / sharks.count
+print(sharksAverageHeight)
 
 var raptorsTotalHeight = 0
 for height in raptors {
     var raptorsHeight = (raptors[0]["Height"] as! Int)
     raptorsTotalHeight += raptorsHeight
 }
-print(raptorsTotalHeight)
+var raptorsAverageHeight = raptorsTotalHeight / raptors.count
+print(raptorsAverageHeight)
 
 
 
