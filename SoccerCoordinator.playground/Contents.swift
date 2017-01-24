@@ -1,4 +1,4 @@
-// individual player constants are stored into their own dictionary as well as one constant that holds all the players, both of these groups are referenced to a typealias that holds the Type, which is 'String: Any'.
+// individual player constants are stored into their own dictionary as well as one constant that holds all the players, both of these groups are referenced to a typealias that holds the Type
 typealias Player = [String: Any]
 typealias PlayerArray = [Player]
 
@@ -50,7 +50,7 @@ while count > 0 {
     count -= 3
 }
 
-//logic that sorts unexperienced players into three even teams
+//logic that sorts inexperienced players into three even teams
 var counter = inexperiencedPlayers.count
 while counter > 0 {
     dragons.append(inexperiencedPlayers.removeFirst())
@@ -58,3 +58,31 @@ while counter > 0 {
     raptors.append(inexperiencedPlayers.removeFirst())
     counter -= 3
 }
+
+// logic that adds the height of the players for each team
+var dragonsTotalHeight = 0
+for height in dragons {
+    var dragonHeight = (dragons[0]["Height"] as! Int)
+    dragonsTotalHeight += dragonHeight
+}
+print(dragonsTotalHeight)
+
+var sharksTotalHeight = 0
+for height in sharks {
+    var sharksHeight = (sharks[0]["Height"] as! Int)
+    sharksTotalHeight += sharksHeight
+}
+print(sharksTotalHeight)
+
+var raptorsTotalHeight = 0
+for height in raptors {
+    var raptorsHeight = (raptors[0]["Height"] as! Int)
+    raptorsTotalHeight += raptorsHeight
+}
+print(raptorsTotalHeight)
+
+
+
+
+
+
