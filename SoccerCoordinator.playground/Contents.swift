@@ -1,7 +1,6 @@
 import UIKit
 
 // individual player variables are stored into their own dictionary
-
 let jSmith: [String: Any] = ["Name": "Joe Smith", "Height": "42", "Experience": true, "Guardian": "Jim and Jan Smith"]
 let jTanner: [String: Any] = ["Name": "Jill Tanner", "Height": "36", "Experience": true, "Guardian": "Clara Tanner"]
 let bBon: [String: Any] = ["Name": "Bill Bonn", "Height": "43", "Experience": true, "Guardian": "Sara and Jenny Bon"]
@@ -30,11 +29,10 @@ var sharks = [Any]()
 var raptors = [Any]()
 
 // variables holding the players who have expereince with soccer vs those that do not
-var experience: [Any] = []
-var noExperience: [Any] = []
+var experience = [Any]()
+var noExperience = [Any]()
 
 // logic that sorts all players into two groups, those with experience and those that have never played before
-
 for player in players {
     if player["Experience"] as! Bool == true {
        experience.append(player)
@@ -42,3 +40,25 @@ for player in players {
         noExperience.append(player)
     }
 }
+
+//logic that sorts experienced players into three even teams
+var count = experience.count
+while count > 0 {
+    dragons.append(experience.removeFirst())
+    sharks.append(experience.removeFirst())
+    raptors.append(experience.removeFirst())
+    count -= 3
+}
+
+//logic that sorts unexperienced players into three even teams
+var counter = noExperience.count
+while counter > 0 {
+    dragons.append(noExperience.removeFirst())
+    sharks.append(noExperience.removeFirst())
+    raptors.append(noExperience.removeFirst())
+    counter -= 3
+}
+
+dragons.count
+sharks.count
+raptors.count
