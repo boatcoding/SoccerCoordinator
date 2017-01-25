@@ -44,6 +44,19 @@ for player in players {
 // logic that sorts the experienced players by height
 
 
+//how do i sort an array of constant/dictionaries
+
+
+for playas in experiencedPlayers {
+//    var newPlayasArray = (experiencedPlayers[0]["Height"] as? Int)
+//    print(newPlayasArray)
+}
+
+
+
+
+
+
 //logic that sorts experienced players into three even teams
 var count = experiencedPlayers.count
 while count > 0 {
@@ -66,7 +79,7 @@ while counter > 0 {
 var dragonsTotalHeight = 0
 for height in dragons {
     var dragonHeight = (dragons[0]["Height"] as? Int)
-    print(dragonsTotalHeight += dragonHeight!)
+    dragonsTotalHeight += dragonHeight!
 }
 var dragonsAverageHeight = dragonsTotalHeight / dragons.count
 
@@ -83,4 +96,3 @@ for height in raptors {
     raptorsTotalHeight += raptorsHeight!
 }
 var raptorsAverageHeight = raptorsTotalHeight / raptors.count
-print(raptorsAverageHeight)
