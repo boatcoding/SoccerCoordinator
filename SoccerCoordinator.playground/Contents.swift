@@ -46,7 +46,9 @@ for player in players {
 
 
 
-
+experiencedPlayers[0]["Height"] as! Int).sorted { (<#[String : Any]#>, <#[String : Any]#>) -> Bool in
+    <#code#>
+}
 
 
 
@@ -59,7 +61,9 @@ print(myArray.sorted($0 < $1))
 // Initialize the Array
 var a = [6,3,2,1,5,4]
 
-experiencedPlayers.sorted(by: <#T##([String : Any], [String : Any]) -> Bool#>) as! [String: Any]
+experiencedPlayers.sorted(by: { (<#[String : Any]#>, <#[String : Any]#>) -> Bool in
+    code
+})
 print(experiencedPlayers)
 
 
@@ -108,7 +112,7 @@ while counter > 0 {
 var dragonsTotalHeight = 0
 for height in dragons {
     var dragonHeight = (dragons[0]["Height"] as! Int)
-    dragonsTotalHeight += dragonHeight
+    print(dragonsTotalHeight += dragonHeight)
 }
 var dragonsAverageHeight = dragonsTotalHeight / dragons.count
 
