@@ -21,18 +21,6 @@ let player16: Player = ["Name": "Phillip Helm", "Height": 44, "isExperienced": t
 let player17: Player = ["Name": "Les Clay", "Height": 42, "isExperienced": true, "Guardian": "Wynonna Brown"]
 let player18: Player = ["Name": "Herschel Krustofski", "Height": 45, "isExperienced": true, "Guardian": "Hyman and Rachel Krustofski"]
 
-func backward(_ s1: String, _ s2: String) -> Bool {
-    return s1 > s2
-}
-
-var playerSortedTesty = player18.sorted(by: backward)
-print(player18)
-
-
-
-
-
-
 let players: PlayerArray = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
 
 // variables holding the players for each team
@@ -77,21 +65,22 @@ while counter > 0 {
 // logic that gives average height for each team
 var dragonsTotalHeight = 0
 for height in dragons {
-    var dragonHeight = (dragons[0]["Height"] as! Int)
-    print(dragonsTotalHeight += dragonHeight)
+    var dragonHeight = (dragons[0]["Height"] as? Int)
+    print(dragonsTotalHeight += dragonHeight!)
 }
 var dragonsAverageHeight = dragonsTotalHeight / dragons.count
 
 var sharksTotalHeight = 0
 for height in sharks {
-    var sharksHeight = (sharks[0]["Height"] as! Int)
-    sharksTotalHeight += sharksHeight
+    var sharksHeight = (sharks[0]["Height"] as? Int)
+    sharksTotalHeight += sharksHeight!
 }
 var sharksAverageHeight = sharksTotalHeight / sharks.count
 
 var raptorsTotalHeight = 0
 for height in raptors {
-    var raptorsHeight = (raptors[0]["Height"] as! Int)
-    raptorsTotalHeight += raptorsHeight
+    var raptorsHeight = (raptors[0]["Height"] as? Int)
+    raptorsTotalHeight += raptorsHeight!
 }
 var raptorsAverageHeight = raptorsTotalHeight / raptors.count
+print(raptorsAverageHeight)
