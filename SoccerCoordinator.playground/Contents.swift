@@ -40,33 +40,39 @@ for player in players {
         inexperiencedPlayers.append(player)
     }
 }
-// logic that sorts the experienced players based of height
-let sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
+// logic that sorts the experienced players based on height
+var sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Int) ?? 0
     let player2Height = (player2["Height"] as? Int) ?? 0
-    return player1Height < player2Height
+    return player1Height > player2Height
 }
-print(sortedExperiencedPlayers) // nice! :)
 
-//logic that sorts experienced players into three even teams
+// logic that sorts the inexperienced players based on height
+var sortedInexperiencedPlayers = inexperiencedPlayers.sorted { (player1, player2) -> Bool in
+    let player1Height = (player1["Height"] as? Int) ?? 0
+    let player2Height = (player2["Height"] as? Int) ?? 0
+    return player1Height > player2Height
+}
+
+//logic that sorts the experienced players into three even teams
 var count = experiencedPlayers.count
 while count > 0 {
-    dragons.append(experiencedPlayers.removeFirst())
-    sharks.append(experiencedPlayers.removeFirst())
-    raptors.append(experiencedPlayers.removeFirst())
+    dragons.append(sortedExperiencedPlayers.removeFirst())
+    sharks.append(sortedExperiencedPlayers.removeFirst())
+    raptors.append(sortedExperiencedPlayers.removeFirst())
     count -= 3
 }
 
 //logic that sorts inexperienced players into three even teams
 var counter = inexperiencedPlayers.count
 while counter > 0 {
-    dragons.append(inexperiencedPlayers.removeFirst())
-    sharks.append(inexperiencedPlayers.removeFirst())
-    raptors.append(inexperiencedPlayers.removeFirst())
+    dragons.append(sortedInexperiencedPlayers.removeFirst())
+    sharks.append(sortedInexperiencedPlayers.removeFirst())
+    raptors.append(sortedInexperiencedPlayers.removeFirst())
     counter -= 3
 }
 
-// logic that gives average height for each team
+// logic that gives average height for each team as a test for the above
 var dragonsTotalHeight = 0
 for height in dragons {
     var dragonHeight = (dragons[0]["Height"] as? Int)
