@@ -34,7 +34,7 @@ var inexperiencedPlayers = [[String: Any]]()
 
 // logic that sorts all players into two groups, those with experience and the unexperienced
 for player in players {
-    if player["isExperienced"] as! Bool == true {
+    if player["isExperienced"] as? Bool == true {
         experiencedPlayers.append(player)
     } else {
         inexperiencedPlayers.append(player)
@@ -42,14 +42,9 @@ for player in players {
 }
 
 // logic that sorts the experienced players by height
-
-
-//how do i sort an array of constant/dictionaries
-
-
 for playas in experiencedPlayers {
-//    var newPlayasArray = (experiencedPlayers[0]["Height"] as? Int)
-//    print(newPlayasArray)
+    var newPlayasArray = (experiencedPlayers[0]["Height"] as? Int)
+    print(newPlayasArray)
 }
 
 
