@@ -59,6 +59,10 @@ print(myArray.sorted($0 < $1))
 // Initialize the Array
 var a = [6,3,2,1,5,4]
 
+experiencedPlayers.sorted(by: <#T##([String : Any], [String : Any]) -> Bool#>) as! [String: Any]
+print(experiencedPlayers)
+
+
 // Sort (ascending) its elements
 
 a = a.sorted { $0 > $1 }
