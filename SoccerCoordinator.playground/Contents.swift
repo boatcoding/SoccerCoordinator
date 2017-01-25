@@ -40,13 +40,13 @@ for player in players {
         inexperiencedPlayers.append(player)
     }
 }
-
+// logic that sorts the experienced players based of height
 let sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Int) ?? 0
     let player2Height = (player2["Height"] as? Int) ?? 0
     return player1Height < player2Height
 }
-print(sortedExperiencedPlayers)
+print(sortedExperiencedPlayers) // nice! :)
 
 //logic that sorts experienced players into three even teams
 var count = experiencedPlayers.count
