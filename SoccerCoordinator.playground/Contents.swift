@@ -41,18 +41,12 @@ for player in players {
     }
 }
 
-// logic that sorts the experienced players by height
+ logic that sorts the experienced players by height
 for playas in experiencedPlayers {
-    var newPlayasArray = (experiencedPlayers[0]["Height"] as? Int)
-    print(newPlayasArray)
-}
+    if experiencedPlayers[0]["Height"] as? Int < [[experiencedPlayers]"Height"] as? Int {
+        print()
+    }
 
-
-var theArray: [Any] = [0, 5, 2, "a", 7, 4, 3]
-theArray.sorted(by:)
-theArray.sorted { (<#Any#>, <#Any#>) -> Bool in
-    if
-}
 
 
 //logic that sorts experienced players into three even teams
