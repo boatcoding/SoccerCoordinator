@@ -41,12 +41,28 @@ for player in players {
     }
 }
 
+
+
+
+
+
+
+
+
+
 // logic that sorts the experienced players by height
 
 var myArray = [9, player2, 1, 10, player1, 5] as [Any]
-print(myArray.sorted(by:))
+print(myArray.sorted($0 < $1))
 //    print(myArray.sorted(by: as Int))
 
+// Initialize the Array
+var a = [6,3,2,1,5,4]
+
+// Sort (ascending) its elements
+
+a = a.sorted { $0 > $1 }
+print(a)
 
 //logic that sorts experienced players into three even teams
 var count = experiencedPlayers.count
@@ -62,6 +78,19 @@ while count > 0 {
     count -= 3
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //logic that sorts inexperienced players into three even teams
 var counter = inexperiencedPlayers.count
 while counter > 0 {
@@ -70,18 +99,6 @@ while counter > 0 {
     raptors.append(inexperiencedPlayers.removeFirst())
     counter -= 3
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // logic that gives average height for each team
 var dragonsTotalHeight = 0
