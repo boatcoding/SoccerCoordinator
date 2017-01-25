@@ -32,7 +32,7 @@ var raptors = [[String: Any]]()
 var experiencedPlayers = [[String: Any]]()
 var inexperiencedPlayers = [[String: Any]]()
 
-// logic that sorts all players into two groups, those with experience and the unexperienced
+// logic that sorts all players into two groups, those with experience and the inexperienced
 for player in players {
     if player["isExperienced"] as? Bool == true {
         experiencedPlayers.append(player)
@@ -48,8 +48,11 @@ for playas in experiencedPlayers {
 }
 
 
-
-
+var theArray: [Any] = [0, 5, 2, "a", 7, 4, 3]
+theArray.sorted(by:)
+theArray.sorted { (<#Any#>, <#Any#>) -> Bool in
+    if
+}
 
 
 //logic that sorts experienced players into three even teams
