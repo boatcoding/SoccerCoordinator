@@ -21,6 +21,18 @@ let player16: Player = ["Name": "Phillip Helm", "Height": 44, "isExperienced": t
 let player17: Player = ["Name": "Les Clay", "Height": 42, "isExperienced": true, "Guardian": "Wynonna Brown"]
 let player18: Player = ["Name": "Herschel Krustofski", "Height": 45, "isExperienced": true, "Guardian": "Hyman and Rachel Krustofski"]
 
+func backward(_ s1: String, _ s2: String) -> Bool {
+    return s1 > s2
+}
+
+var playerSortedTesty = player18.sorted(by: backward)
+print(player18)
+
+
+
+
+
+
 let players: PlayerArray = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
 
 // variables holding the players for each team
@@ -41,63 +53,17 @@ for player in players {
     }
 }
 
-
-
-
-
-
-experiencedPlayers[0]["Height"] as! Int).sorted { (<#[String : Any]#>, <#[String : Any]#>) -> Bool in
-    <#code#>
-}
-
-
-
 // logic that sorts the experienced players by height
 
-var myArray = [9, player2, 1, 10, player1, 5] as [Any]
-print(myArray.sorted($0 < $1))
-//    print(myArray.sorted(by: as Int))
-
-// Initialize the Array
-var a = [6,3,2,1,5,4]
-
-experiencedPlayers.sorted(by: { (<#[String : Any]#>, <#[String : Any]#>) -> Bool in
-    code
-})
-print(experiencedPlayers)
-
-
-// Sort (ascending) its elements
-
-a = a.sorted { $0 > $1 }
-print(a)
 
 //logic that sorts experienced players into three even teams
 var count = experiencedPlayers.count
 while count > 0 {
-//    experiencedPlayers.sorted(by: { (<#[String : Any]#>, <#[String : Any]#>) -> Bool in
-  //      <#code#>
-   // })
-
-
     dragons.append(experiencedPlayers.removeFirst())
     sharks.append(experiencedPlayers.removeFirst())
     raptors.append(experiencedPlayers.removeFirst())
     count -= 3
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //logic that sorts inexperienced players into three even teams
 var counter = inexperiencedPlayers.count
