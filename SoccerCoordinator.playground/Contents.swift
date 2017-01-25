@@ -41,12 +41,12 @@ for player in players {
     }
 }
 
- logic that sorts the experienced players by height
 for playas in experiencedPlayers {
-    if experiencedPlayers[0]["Height"] as? Int < [[experiencedPlayers]"Height"] as? Int {
-        print()
+    if ((playas["Height"] as? Int) != nil) {
+//        (playas["Height"].sort() as Any)
+            print(playas.sorted(by: <#T##((key: String, value: Any), (key: String, value: Any)) -> Bool#>)["Height"])
     }
-
+}
 
 
 //logic that sorts experienced players into three even teams
