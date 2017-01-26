@@ -76,7 +76,7 @@ while counter > 0 {
 }
 
 //Part 3
-// logic that creates a letter for each players guardian
+// logic that creates a letter for each players guardian welcoming thier child to a team
 let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
