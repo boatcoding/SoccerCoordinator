@@ -76,7 +76,8 @@ while counter > 0 {
 }
 
 //Part 3
-// logic that creates a letter for each players guardian welcoming thier child to a team
+// logic that creates a letter for each players guardian welcoming thier child to a team [note to self and reviewers..perhaps, I could add a switch statment represnting the constants and then simply have one for-in for the actual letter,..thinking of refactoring this but I guess I am curious if this will pass as is. Thanks again for your help!!]
+
 let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
@@ -101,3 +102,27 @@ for guardianLetterInfo in raptors {
     var player = guardianLetterInfo["Name"] as! String
     print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
 }
+
+//Testing code
+ // logic that gives average height for each team as a test for the above
+ var dragonsTotalHeight = 0
+ for height in dragons {
+ var dragonHeight = (dragons[0]["Height"] as? Int)
+ dragonsTotalHeight += dragonHeight!
+ }
+ var dragonsAverageHeight = dragonsTotalHeight / dragons.count
+ 
+ var sharksTotalHeight = 0
+ for height in sharks {
+ var sharksHeight = (sharks[0]["Height"] as? Int)
+ sharksTotalHeight += sharksHeight!
+ }
+ var sharksAverageHeight = sharksTotalHeight / sharks.count
+ 
+ var raptorsTotalHeight = 0
+ for height in raptors {
+ var raptorsHeight = (raptors[0]["Height"] as? Int)
+ raptorsTotalHeight += raptorsHeight!
+ }
+ var raptorsAverageHeight = raptorsTotalHeight / raptors.count
+ 
