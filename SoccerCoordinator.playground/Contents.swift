@@ -29,6 +29,7 @@ let players: PlayerArray = [player1, player2, player3, player4, player5, player6
 var dragons = [[String: Any]]()
 var sharks = [[String: Any]]()
 var raptors = [[String: Any]]()
+var league = [dragons, sharks, raptors]
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experiencedPlayers = [[String: Any]]()
@@ -75,3 +76,17 @@ while counter > 0 {
 }
 
 //Part 3
+
+var dragonsPractice = "March 17, 1pm"
+var sharksPractice = "March 17, 3pm"
+var raptorsPractice = "March 18, 1pm"
+var teamPractice = [dragonsPractice, sharksPractice, raptorsPractice]
+ 
+for everyPlayers in league {
+    func guardianLetter(guardianName: String, playerName = String, teamName = String, teamPractice = String) -> String {
+        "Hi " +  "(\guardianName), " + "(\playerName) " + "is now on the " + "(\teamName)!!" + "The first team pracice will be held on " + "(\teamPractice), " + "at St. Johns Catherdral park in Portland. We look forward to having" + "(\playerName) " + "on the team! " + "Thanks, " + "The " + "(\teamName)"
+    }
+    return guardianLetter
+}
+
+
