@@ -77,16 +77,16 @@ while counter > 0 {
 
 //Part 3
 
-var dragonsPractice = "March 17, 1pm"
-var sharksPractice = "March 17, 3pm"
-var raptorsPractice = "March 18, 1pm"
-var teamPractice = [dragonsPractice, sharksPractice, raptorsPractice]
- 
-for everyPlayers in league {
-    func guardianLetter(guardianName: String, playerName = String, teamName = String, teamPractice = String) -> String {
-        "Hi " +  "(\guardianName), " + "(\playerName) " + "is now on the " + "(\teamName)!!" + "The first team pracice will be held on " + "(\teamPractice), " + "at St. Johns Catherdral park in Portland. We look forward to having" + "(\playerName) " + "on the team! " + "Thanks, " + "The " + "(\teamName)"
-    }
-    return guardianLetter
-}
+//var dragonsPractice = "March 17, 1pm"
+//var sharksPractice = "March 17, 3pm"
+//var raptorsPractice = "March 18, 1pm"
+//var teamPractice = [dragonsPractice, sharksPractice, raptorsPractice]
+// 
+//for everyPlayers in league {
+//    func guardianLetter(guardianName: String, playerName = String, teamName = String, teamPractice = String) -> String {
+//        "Hi " +  "(\guardianName), " + "(\playerName) " + "is now on the " + "(\teamName)!!" + "The first team pracice will be held on " + "(\teamPractice), " + "at St. Johns Catherdral park in Portland. We look forward to having" + "(\playerName) " + "on the team! " + "Thanks, " + "The " + "(\teamName)"
+//    }
+//    return guardianLetter
+//}
 
 
