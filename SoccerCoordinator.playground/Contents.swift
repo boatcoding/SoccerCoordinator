@@ -77,9 +77,9 @@ while counter > 0 {
 
 //Part 3
 // logic that creates a letter for each players guardian
-var dragonsPractice = "March 17, 1pm"
-var sharksPractice = "March 17, 3pm"
-var raptorsPractice = "March 18, 1pm"
+let dragonsPractice = "March 17, 1pm"
+let sharksPractice = "March 17, 3pm"
+let raptorsPractice = "March 18, 1pm"
 let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
