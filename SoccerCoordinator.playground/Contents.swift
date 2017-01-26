@@ -1,3 +1,4 @@
+// Part 1
 // individual player constants are stored into their own dictionary as well as one constant that holds all the players, both of these groups are referenced to a typealias that holds the Type
 typealias Player = [String: Any]
 typealias PlayerArray = [Player]
@@ -23,6 +24,7 @@ let player18: Player = ["Name": "Herschel Krustofski", "Height": 45, "isExperien
 
 let players: PlayerArray = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
 
+//Part 2
 // variables holding the players for each team
 var dragons = [[String: Any]]()
 var sharks = [[String: Any]]()
@@ -40,14 +42,14 @@ for player in players {
         inexperiencedPlayers.append(player)
     }
 }
-// logic that sorts the experienced players based on height
+// variables holding the logic that sorts the experienced players based on height
 var sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Int) ?? 0
     let player2Height = (player2["Height"] as? Int) ?? 0
     return player1Height > player2Height
 }
 
-// logic that sorts the inexperienced players based on height
+// variables holding the logic that sorts the inexperienced players based on height
 var sortedInexperiencedPlayers = inexperiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Int) ?? 0
     let player2Height = (player2["Height"] as? Int) ?? 0
@@ -72,24 +74,4 @@ while counter > 0 {
     counter -= 3
 }
 
-// logic that gives average height for each team as a test for the above
-var dragonsTotalHeight = 0
-for height in dragons {
-    var dragonHeight = (dragons[0]["Height"] as? Int)
-    dragonsTotalHeight += dragonHeight!
-}
-var dragonsAverageHeight = dragonsTotalHeight / dragons.count
-
-var sharksTotalHeight = 0
-for height in sharks {
-    var sharksHeight = (sharks[0]["Height"] as? Int)
-    sharksTotalHeight += sharksHeight!
-}
-var sharksAverageHeight = sharksTotalHeight / sharks.count
-
-var raptorsTotalHeight = 0
-for height in raptors {
-    var raptorsHeight = (raptors[0]["Height"] as? Int)
-    raptorsTotalHeight += raptorsHeight!
-}
-var raptorsAverageHeight = raptorsTotalHeight / raptors.count
+//Part 3
