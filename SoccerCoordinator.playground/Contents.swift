@@ -49,7 +49,7 @@ var sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) ->
     return player1Height > player2Height
 }
 
-// variables holding the logic that sorts the inexperienced players based on height
+// variables holding the logic that sorts the inexperienced players based on height [Note: sorted() was more advanced ]
 var sortedInexperiencedPlayers = inexperiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Int) ?? 0
     let player2Height = (player2["Height"] as? Int) ?? 0
