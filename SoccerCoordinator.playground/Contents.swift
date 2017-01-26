@@ -80,24 +80,24 @@ while counter > 0 {
 var dragonsPractice = "March 17, 1pm"
 var sharksPractice = "March 17, 3pm"
 var raptorsPractice = "March 18, 1pm"
-let d = "Dragons soccer team"
-let s = "Sharks soccer team"
-let r = "Raptors soccer team"
+let dragonsName = "Dragons soccer team"
+let sharksName = "Sharks soccer team"
+let raptorsName = "Raptors soccer team"
 
 for guardianLetterInfo in dragons {
     var guardian = guardianLetterInfo["Guardian"] as! String
     var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(d)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(d)")
+    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
 }
 
 for guardianLetterInfo in sharks {
     var guardian = guardianLetterInfo["Guardian"] as! String
     var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(s)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(s)")
+    print("Hi \(guardian), \(player) has been officially accepted to the \(sharksName)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(sharksName)")
 }
 
 for guardianLetterInfo in raptors {
     var guardian = guardianLetterInfo["Guardian"] as! String
     var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(r)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(r)")
+    print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
 }
