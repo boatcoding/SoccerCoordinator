@@ -110,17 +110,17 @@ let raptorsName = "Raptors soccer team"
 for guardianLetterInfo in dragons {
     var guardian = guardianLetterInfo["Guardian"] as! String
     var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
+    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
 }
 
 for guardianLetterInfo in sharks {
     var guardian = guardianLetterInfo["Guardian"] as! String
     var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(sharksName)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(sharksName)")
+    print("Hi \(guardian), \(player) has been officially accepted to the \(sharksName)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(sharksName)")
 }
 
 for guardianLetterInfo in raptors {
     var guardian = guardianLetterInfo["Guardian"] as! String
     var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Catherdral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
+    print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
 }
