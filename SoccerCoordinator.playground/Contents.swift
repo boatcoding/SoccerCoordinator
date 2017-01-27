@@ -24,6 +24,20 @@ let player18: Player = ["Name": "Herschel Krustofski", "Height": 45, "isExperien
 
 let players: PlayerArray = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Part 2
 // variables holding the players for each team
 var dragons = [[String: Any]]()
@@ -75,14 +89,67 @@ while counter > 0 {
     counter -= 3
 }
 
-//logic that gives average height for each team as a test for the above, also create a func for this.....
 
-var dragonsTotalHeight = 0
+
+
+
+
+//var teamHeights = [Double]()
+//func getsTeamHeights([[String:Any]]) -> Double{
+//    
+//    return teamHeights
+//}
+//func getsAverage(teamHeights:Double) -> Double {
+//    
+//    return
+//}
+
+//logic that gives average height for each team as a test for the above, also create a func for this.....
+//var teamHeight = [Double]()
+//func getsHeights(teamName: [[String:Any]]) -> Double {
+//    var playerHeight = (teamName[0]["Height"] as? Int)
+//    teamHeight += playerHeight
+//    return teamHeight
+//}
+//
+
+
+
+
+
+
+
+
+
+
+
+//var team = [Any]()
+//func collectsHeights(team: [[String:Any]]) -> [Double] {
+//    //collects height value and stores in a variable
+//    var collector = (team[0]["Height"] as? Int)
+//    return [collector]
+//}
+//collectsHeights(team: raptors)
+//
+//
+//
+//
+//
+//func getsAverage(collectsHeights: [Double]) -> Double {
+//    return Double
+//}
+
+//collectsHeights(team: raptors)
+
+
+var dragonsTotalHeight = [Double]()
 for height in dragons {
-    var dragonHeight = (dragons[0]["Height"] as? Int)
-    dragonsTotalHeight += dragonHeight!
+    var playerHeight = (dragons[0]["Height"] as? Double)
+    
+    print(test)
 }
-var dragonsAverageHeight = dragonsTotalHeight / dragons.count
+
+//var dragonsAverageHeight = dragonsTotalHeight / dragons.count
 
 var sharksTotalHeight = 0
 for height in sharks {
@@ -97,6 +164,46 @@ for height in raptors {
     raptorsTotalHeight += raptorsHeight!
 }
 var raptorsAverageHeight = raptorsTotalHeight / raptors.count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Part 3
 // create a func for all this hoop plah...
