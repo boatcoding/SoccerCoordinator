@@ -75,7 +75,8 @@ while counter > 0 {
     counter -= 3
 }
 
-//logic that gives average height for each team as a test for the above
+//logic that gives average height for each team as a test for the above, also create a func for this.....
+
 var dragonsTotalHeight = 0
 for height in dragons {
     var dragonHeight = (dragons[0]["Height"] as? Int)
@@ -98,29 +99,29 @@ for height in raptors {
 var raptorsAverageHeight = raptorsTotalHeight / raptors.count
 
 //Part 3
-// logic that creates a letter for each players guardian welcoming thier child to a team [note to self and reviewers..perhaps, I could add a switch statment represnting the constants and then simply have one for-in for the actual letter,..thinking of refactoring this but I guess I am curious if this will pass as is. Thanks again for your help!!]
+// create a func for all this hoop plah...
 
-let dragonsPractice = "March 17, 1pm"
-let sharksPractice = "March 17, 3pm"
-let raptorsPractice = "March 18, 1pm"
-let dragonsName = "Dragons soccer team"
-let sharksName = "Sharks soccer team"
-let raptorsName = "Raptors soccer team"
-
-for guardianLetterInfo in dragons {
-    var guardian = guardianLetterInfo["Guardian"] as! String
-    var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
-}
-
-for guardianLetterInfo in sharks {
-    var guardian = guardianLetterInfo["Guardian"] as! String
-    var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(sharksName)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(sharksName)")
-}
-
-for guardianLetterInfo in raptors {
-    var guardian = guardianLetterInfo["Guardian"] as! String
-    var player = guardianLetterInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
-}
+//let dragonsPractice = "March 17, 1pm"
+//let sharksPractice = "March 17, 3pm"
+//let raptorsPractice = "March 18, 1pm"
+//let dragonsName = "Dragons soccer team"
+//let sharksName = "Sharks soccer team"
+//let raptorsName = "Raptors soccer team"
+//
+//for guardianLetterInfo in dragons {
+//    var guardian = guardianLetterInfo["Guardian"] as! String
+//    var player = guardianLetterInfo["Name"] as! String
+//    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
+//}
+//
+//for guardianLetterInfo in sharks {
+//    var guardian = guardianLetterInfo["Guardian"] as! String
+//    var player = guardianLetterInfo["Name"] as! String
+//    print("Hi \(guardian), \(player) has been officially accepted to the \(sharksName)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(sharksName)")
+//}
+//
+//for guardianLetterInfo in raptors {
+//    var guardian = guardianLetterInfo["Guardian"] as! String
+//    var player = guardianLetterInfo["Name"] as! String
+//    print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
+//}
