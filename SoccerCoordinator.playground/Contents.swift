@@ -59,15 +59,15 @@ for player in players {
 }
 // variables holding the logic that sorts the experienced players based on height
 var sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
-    let player1Height = (player1["Height"] as? Int) ?? 0
-    let player2Height = (player2["Height"] as? Int) ?? 0
+    let player1Height = (player1["Height"] as? Double) ?? 0
+    let player2Height = (player2["Height"] as? Double) ?? 0
     return player1Height > player2Height
 }
 
 // variables holding the logic that sorts the inexperienced players based on height [Note: sorted() was more advanced ]
 var sortedInexperiencedPlayers = inexperiencedPlayers.sorted { (player1, player2) -> Bool in
-    let player1Height = (player1["Height"] as? Int) ?? 0
-    let player2Height = (player2["Height"] as? Int) ?? 0
+    let player1Height = (player1["Height"] as? Double) ?? 0
+    let player2Height = (player2["Height"] as? Double) ?? 0
     return player1Height > player2Height
 }
 
@@ -93,18 +93,33 @@ while counter > 0 {
 
 
 
+//var myArray = [Double]()
+//myArray.append(2.23459824375)
+//myArray
 
+//a function that collects all the Heights in one team and then stores that number into a variable
+
+func teamHeightGetter(_: [[String:Any]]) -> [Double] {
+    var teamHeightBox = [Double]()
+    var teamName = [[String: Any]]()
+    let heightCollector = (teamName[0]["Height"] as? Double)
+    teamHeightBox.append(heightCollector!)
+    return teamHeightBox
+}
+teamHeightGetter([[String : Any]])
+//a function that collects
+//
 //var teamHeights = [Double]()
 //func getsTeamHeights([[String:Any]]) -> Double{
-//    
+//    teamHeights.append(teamName[0]["Height"] as? Double)
 //    return teamHeights
 //}
 //func getsAverage(teamHeights:Double) -> Double {
-//    
+//    teamheights
 //    return
 //}
 
-//logic that gives average height for each team as a test for the above, also create a func for this.....
+
 //var teamHeight = [Double]()
 //func getsHeights(teamName: [[String:Any]]) -> Double {
 //    var playerHeight = (teamName[0]["Height"] as? Int)
@@ -113,57 +128,6 @@ while counter > 0 {
 //}
 //
 
-
-
-
-
-
-
-
-
-
-
-//var team = [Any]()
-//func collectsHeights(team: [[String:Any]]) -> [Double] {
-//    //collects height value and stores in a variable
-//    var collector = (team[0]["Height"] as? Int)
-//    return [collector]
-//}
-//collectsHeights(team: raptors)
-//
-//
-//
-//
-//
-//func getsAverage(collectsHeights: [Double]) -> Double {
-//    return Double
-//}
-
-//collectsHeights(team: raptors)
-
-
-var dragonsTotalHeight = [Double]()
-for height in dragons {
-    var playerHeight = (dragons[0]["Height"] as? Double)
-    
-    print(test)
-}
-
-//var dragonsAverageHeight = dragonsTotalHeight / dragons.count
-
-var sharksTotalHeight = 0
-for height in sharks {
-    var sharksHeight = (sharks[0]["Height"] as? Int)
-    sharksTotalHeight += sharksHeight!
-}
-var sharksAverageHeight = sharksTotalHeight / sharks.count
-
-var raptorsTotalHeight = 0
-for height in raptors {
-    var raptorsHeight = (raptors[0]["Height"] as? Int)
-    raptorsTotalHeight += raptorsHeight!
-}
-var raptorsAverageHeight = raptorsTotalHeight / raptors.count
 
 
 
