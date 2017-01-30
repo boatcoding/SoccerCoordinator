@@ -77,14 +77,18 @@ while counter > 0 {
 }
 var dragonHeights: [Double] = []
 var sharkHeights: [Double] = []
-var raptorsHeights: [Double] = []
+var raptorHeights: [Double] = []
 
 var dragonsAverage: Double = 0
 var sharksAverage: Double = 0
 var raptorsAverage: Double = 0
 
+var preTeamsAverageHeight: Double = 0
+var teamsAverageHeight: Double = 0
+
+
 //Logic that collects all the heights for a team and stores them in an array of type Double. NOTE: 'inout' is more advanced for me.
-func teamHeightsGetter(teamHeightBox: inout [Double], teamName: [[String:Any]]) -> [Double] {
+func heightsCollectorBy(teamHeightBox: inout [Double], teamName: [[String:Any]]) -> [Double] {
     for player in teamName {
         if let heights = player["Height"] as? Double {
             teamHeightBox.append(heights)
@@ -92,12 +96,12 @@ func teamHeightsGetter(teamHeightBox: inout [Double], teamName: [[String:Any]]) 
     }
     return teamHeightBox
 }
+heightsCollectorBy(teamHeightBox: &dragonHeights, teamName: dragons)
+heightsCollectorBy(teamHeightBox: &sharkHeights, teamName: sharks)
+heightsCollectorBy(teamHeightBox: &raptorHeights, teamName: raptors)
 
 // logic that will give the average height for a team
-var preTeamsAverageHeight: Double = 0
-var teamsAverageHeight: Double = 0
-
-func averageTeamHeightGetter(teamName: [Double]) -> Double {
+func averageTeamHeightOf(teamName: [Double]) -> Double {
     preTeamsAverageHeight = 0
     
     for playerHeights in teamName {
