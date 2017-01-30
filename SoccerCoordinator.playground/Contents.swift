@@ -75,6 +75,14 @@ while counter > 0 {
     raptors.append(sortedInexperiencedPlayers.removeFirst())
     counter -= 3
 }
+
+
+
+
+
+
+
+
 var dragonHeights: [Double] = []
 var sharkHeights: [Double] = []
 var raptorHeights: [Double] = []
@@ -100,8 +108,12 @@ heightsCollectorBy(teamHeightBox: &dragonHeights, teamName: dragons)
 heightsCollectorBy(teamHeightBox: &sharkHeights, teamName: sharks)
 heightsCollectorBy(teamHeightBox: &raptorHeights, teamName: raptors)
 
+dragonHeights
+sharkHeights
+raptorHeights
+
 // logic that will give the average height for a team
-func averageTeamHeightOf(teamName: [Double]) -> Double {
+func averageHeightFor(teamName: [Double]) -> Double {
     preTeamsAverageHeight = 0
     
     for playerHeights in teamName {
@@ -111,6 +123,38 @@ func averageTeamHeightOf(teamName: [Double]) -> Double {
     teamsAverageHeight = preTeamsAverageHeight / Double(teamName.count)
     return teamsAverageHeight
 }
+raptorsAverage = averageHeightFor(teamName: raptorHeights)
+sharksAverage = averageHeightFor(teamName: sharkHeights)
+dragonsAverage = averageHeightFor(teamName: dragonHeights)
+
+print(raptorsAverage)
+raptorHeights
+print(sharksAverage)
+sharkHeights
+print(dragonsAverage)
+dragonHeights
+///huh, shoot, looks like the averages are off by more than 1.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
