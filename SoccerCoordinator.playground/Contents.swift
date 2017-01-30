@@ -119,13 +119,13 @@ raptorsAverage = averageHeightFor(team: raptorHeights)
 sharksAverage = averageHeightFor(team: sharkHeights)
 dragonsAverage = averageHeightFor(team: dragonHeights)
 
-print(raptorsAverage)
+//print(raptorsAverage)
 //41.1666666666667
 raptorHeights
-print(sharksAverage)
+//print(sharksAverage)
 //42.5
 sharkHeights
-print(dragonsAverage)
+//print(dragonsAverage)
 //43.6666666666667
 dragonHeights
 
@@ -134,42 +134,31 @@ dragonHeights
 //sharks 42.5
 //raptors 41.666
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Part 3
 // to be refactored...
 
-//let dragonsPractice = "March 17, 1pm"
-//let sharksPractice = "March 17, 3pm"
-//let raptorsPractice = "March 18, 1pm"
-//let dragonsName = "Dragons soccer team"
-//let sharksName = "Sharks soccer team"
-//let raptorsName = "Raptors soccer team"
-//
-//for guardianLetterInfo in dragons {
-//    var guardian = guardianLetterInfo["Guardian"] as! String
-//    var player = guardianLetterInfo["Name"] as! String
+let dragonsPractice = "March 17, 1pm"
+let sharksPractice = "March 17, 3pm"
+let raptorsPractice = "March 18, 1pm"
+let dragonsName = "Dragons soccer team"
+let sharksName = "Sharks soccer team"
+let raptorsName = "Raptors soccer team"
+var dragonsLetter = ""
+var sharksLetter = ""
+var raptorsLetter = ""
+
+func guardianLetterBy(teamName: [[String:Any]]) {
+  for guardianInfo in teamName {
+    var guardian = guardianInfo["Guardian"] as! String
+    var player = guardianInfo["Name"] as! String
+    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
+  }
+}
+guardianLetterBy(teamName: raptors)
+
+//for guardianInfo in dragons {
+//    var guardian = guardianInfo["Guardian"] as! String
+//    var player = guardianInfo["Name"] as! String
 //    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
 //}
 //
