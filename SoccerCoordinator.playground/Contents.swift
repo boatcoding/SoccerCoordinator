@@ -3,47 +3,33 @@
 typealias Player = [String: Any]
 typealias PlayerArray = [Player]
 
-let player1: Player = ["Name": "Joe Smith", "Height": 42, "isExperienced": true, "Guardian": "Jim and Jan Smith"]
-let player2: Player = ["Name": "Jill Tanner", "Height": 36, "isExperienced": true, "Guardian": "Clara Tanner"]
-let player3: Player = ["Name": "Bill Bonn", "Height": 43, "isExperienced": true, "Guardian": "Sara and Jenny Bon"]
-let player4: Player = ["Name": "Eva Gordon", "Height": 45, "isExperienced": false, "Guardian": "Wendy and Mike Gordon"]
-let player5: Player = ["Name": "Matt Gill", "Height": 40, "isExperienced": false, "Guardian": "Charles and Sylvia Gill"]
-let player6: Player = ["Name": "Kimmy Stein", "Height": 41, "isExperienced": false, "Guardian": "Bill and Hillary Stein"]
-let player7: Player = ["Name": "Sammy Adams", "Height": 45, "isExperienced": false, "Guardian": "Jeff Adams"]
-let player8: Player = ["Name": "Karl Saygan", "Height": 42, "isExperienced": true, "Guardian": "Heather Bledsoe"]
-let player9: Player = ["Name": "Suzane Greenberg", "Height": 44, "isExperienced": true, "Guardian": "Henrietta Dumas"]
-let player10: Player = ["Name": "Sal Dali", "Height": 41, "isExperienced": false, "Guardian": "Gala Dali"]
-let player11: Player = ["Name": "Joe Kavalier", "Height": 39, "isExperienced": false, "Guardian": "Sam and Elaine Kavalier"]
-let player12: Player = ["Name": "Ben Finkelstein", "Height": 44, "isExperienced": false, "Guardian": "Aaron and Jill Finkelstein"]
-let player13: Player = ["Name": "Diego Soto", "Height": 41, "isExperienced": true, "Guardian": "Robin and Sarika Soto"]
-let player14: Player = ["Name": "Chloe Alaska", "Height": 47, "isExperienced": false, "Guardian": "David and Jamie Alaska"]
-let player15: Player = ["Name": "Arnold Willis", "Height": 43, "isExperienced": false, "Guardian": "Claire Willis"]
-let player16: Player = ["Name": "Phillip Helm", "Height": 44, "isExperienced": true, "Guardian": "Thomas Helm and Eva Jones"]
-let player17: Player = ["Name": "Les Clay", "Height": 42, "isExperienced": true, "Guardian": "Wynonna Brown"]
-let player18: Player = ["Name": "Herschel Krustofski", "Height": 45, "isExperienced": true, "Guardian": "Hyman and Rachel Krustofski"]
+let player1: Player = ["Name": "Joe Smith", "Height": 42.0, "isExperienced": true, "Guardian": "Jim and Jan Smith"]
+let player2: Player = ["Name": "Jill Tanner", "Height": 36.0, "isExperienced": true, "Guardian": "Clara Tanner"]
+let player3: Player = ["Name": "Bill Bonn", "Height": 43.0, "isExperienced": true, "Guardian": "Sara and Jenny Bon"]
+let player4: Player = ["Name": "Eva Gordon", "Height": 45.0, "isExperienced": false, "Guardian": "Wendy and Mike Gordon"]
+let player5: Player = ["Name": "Matt Gill", "Height": 40.0, "isExperienced": false, "Guardian": "Charles and Sylvia Gill"]
+let player6: Player = ["Name": "Kimmy Stein", "Height": 41.0, "isExperienced": false, "Guardian": "Bill and Hillary Stein"]
+let player7: Player = ["Name": "Sammy Adams", "Height": 45.0, "isExperienced": false, "Guardian": "Jeff Adams"]
+let player8: Player = ["Name": "Karl Saygan", "Height": 42.0, "isExperienced": true, "Guardian": "Heather Bledsoe"]
+let player9: Player = ["Name": "Suzane Greenberg", "Height": 44.0, "isExperienced": true, "Guardian": "Henrietta Dumas"]
+let player10: Player = ["Name": "Sal Dali", "Height": 41.0, "isExperienced": false, "Guardian": "Gala Dali"]
+let player11: Player = ["Name": "Joe Kavalier", "Height": 39.0, "isExperienced": false, "Guardian": "Sam and Elaine Kavalier"]
+let player12: Player = ["Name": "Ben Finkelstein", "Height": 44.0, "isExperienced": false, "Guardian": "Aaron and Jill Finkelstein"]
+let player13: Player = ["Name": "Diego Soto", "Height": 41.0, "isExperienced": true, "Guardian": "Robin and Sarika Soto"]
+let player14: Player = ["Name": "Chloe Alaska", "Height": 47.0, "isExperienced": false, "Guardian": "David and Jamie Alaska"]
+let player15: Player = ["Name": "Arnold Willis", "Height": 43.0, "isExperienced": false, "Guardian": "Claire Willis"]
+let player16: Player = ["Name": "Phillip Helm", "Height": 44.0, "isExperienced": true, "Guardian": "Thomas Helm and Eva Jones"]
+let player17: Player = ["Name": "Les Clay", "Height": 42.0, "isExperienced": true, "Guardian": "Wynonna Brown"]
+let player18: Player = ["Name": "Herschel Krustofski", "Height": 45.0, "isExperienced": true, "Guardian": "Hyman and Rachel Krustofski"]
 
 let players: PlayerArray = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Part 2
 // variables holding the players for each team
 var dragons = [[String: Any]]()
 var sharks = [[String: Any]]()
 var raptors = [[String: Any]]()
-var league = [dragons, sharks, raptors]
+let leageue = [dragons, sharks, raptors]
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experiencedPlayers = [[String: Any]]()
@@ -88,89 +74,44 @@ while counter > 0 {
     raptors.append(sortedInexperiencedPlayers.removeFirst())
     counter -= 3
 }
+var dragonHeights: [Double] = []
+var sharkHeights: [Double] = []
+var raptorsHeights: [Double] = []
 
+var dragonsAverage: Double = 0
+var sharksAverage: Double = 0
+var raptorsAverage: Double = 0
 
-
-
-
-//var myArray = [Double]()
-//myArray.append(2.23459824375)
-//myArray
-
-//a function that collects all the Heights in one team and then stores that number into a variable
-
-func teamHeightGetter(_: [[String:Any]]) -> [Double] {
-    var teamHeightBox = [Double]()
-    var teamName = [[String: Any]]()
-    let heightCollector = (teamName[0]["Height"] as? Double)
-    teamHeightBox.append(heightCollector!)
+//Logic that collects all the heights for a team and stores them in an array of type Double. NOTE: 'inout' is more advanced for me.
+func teamHeightsGetter(teamHeightBox: inout [Double], teamName: [[String:Any]]) -> [Double] {
+    for player in teamName {
+        if let heights = player["Height"] as? Double {
+            teamHeightBox.append(heights)
+        }
+    }
     return teamHeightBox
 }
-teamHeightGetter([[String : Any]])
-//a function that collects
-//
-//var teamHeights = [Double]()
-//func getsTeamHeights([[String:Any]]) -> Double{
-//    teamHeights.append(teamName[0]["Height"] as? Double)
-//    return teamHeights
-//}
-//func getsAverage(teamHeights:Double) -> Double {
-//    teamheights
-//    return
-//}
 
+// logic that will give the average height for a team
+var preTeamsAverageHeight: Double = 0
+var teamsAverageHeight: Double = 0
 
-//var teamHeight = [Double]()
-//func getsHeights(teamName: [[String:Any]]) -> Double {
-//    var playerHeight = (teamName[0]["Height"] as? Int)
-//    teamHeight += playerHeight
-//    return teamHeight
-//}
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func averageTeamHeightGetter(teamName: [Double]) -> Double {
+    preTeamsAverageHeight = 0
+    
+    for playerHeights in teamName {
+        preTeamsAverageHeight += playerHeights
+    }
+    
+    teamsAverageHeight = preTeamsAverageHeight / Double(teamName.count)
+    return teamsAverageHeight
+}
 
 
 
 
 //Part 3
-// create a func for all this hoop plah...
+// to be refactored...
 
 //let dragonsPractice = "March 17, 1pm"
 //let sharksPractice = "March 17, 3pm"
