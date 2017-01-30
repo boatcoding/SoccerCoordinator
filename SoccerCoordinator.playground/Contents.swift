@@ -143,39 +143,17 @@ let practiceTimes = [dragonsPractice, sharksPractice, raptorsPractice]
 let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
-var dragonsLetter = ""
-var sharksLetter = ""
-var raptorsLetter = ""
+let teamNames = [dragonsName,sharksName, raptorsName]
 
-func guardianLetterBy(teamName: [[String:Any]]) {
+
+
+func guardianLetterBy(teamName: [[String:Any]]) -> String {
   for guardianInfo in teamName {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
+    let team = "TEAMNAME"
+    let practice = "TEAMPRACTICE"
+    let messageForGuardian = "Hi \(guardian), \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The little league soccer volunteers"
   }
-}
-
-// ah sweeet, functions..print baby print.. woot.
+} return messageForGuardian
 guardianLetterBy(teamName: sharks)
-//this call works but is pringting "Dragons soccer team"
-
-
-
-//I'm done with you guys.. ;-)
-//for guardianInfo in dragons {
-//    var guardian = guardianInfo["Guardian"] as! String
-//    var player = guardianInfo["Name"] as! String
-//    print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
-//}
-//
-//for guardianLetterInfo in sharks {
-//    var guardian = guardianLetterInfo["Guardian"] as! String
-//    var player = guardianLetterInfo["Name"] as! String
-//    print("Hi \(guardian), \(player) has been officially accepted to the \(sharksName)!!! The first team pracice will be held on \(sharksPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(sharksName)")
-//}
-//
-//for guardianLetterInfo in raptors {
-//    var guardian = guardianLetterInfo["Guardian"] as! String
-//    var player = guardianLetterInfo["Name"] as! String
-//    print("Hi \(guardian), \(player) has been officially accepted to the \(raptorsName)!!! The first team pracice will be held on \(raptorsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(raptorsName)")
-//}
