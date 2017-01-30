@@ -151,7 +151,7 @@ func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-    var team = if teamName == raptors {
+    var team = if teamName == dragons {
         team = dragonsName,
         practiceTimes = dragonsPractice
     } else if teamName == sharks {
