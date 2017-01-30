@@ -136,10 +136,10 @@ dragonHeights
 
 //Part 3
 // to be refactored...
-
 let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
+let practiceTimes = [dragonsPractice, sharksPractice, raptorsPractice]
 let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
@@ -149,13 +149,19 @@ var raptorsLetter = ""
 
 func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
-    var guardian = guardianInfo["Guardian"] as! String
-    var player = guardianInfo["Name"] as! String
+    let guardian = guardianInfo["Guardian"] as! String
+    let player = guardianInfo["Name"] as! String
     print("Hi \(guardian), \(player) has been officially accepted to the \(dragonsName)!!! The first team pracice will be held on \(dragonsPractice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The \(dragonsName)")
   }
 }
-guardianLetterBy(teamName: raptors)
 
+// ah sweeet, functions..print baby print.. woot.
+guardianLetterBy(teamName: sharks)
+//this call works but is pringting "Dragons soccer team"
+
+
+
+//I'm done with you guys.. ;-)
 //for guardianInfo in dragons {
 //    var guardian = guardianInfo["Guardian"] as! String
 //    var player = guardianInfo["Name"] as! String
