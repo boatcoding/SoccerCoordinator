@@ -2,6 +2,7 @@
 // individual player constants are stored into their own dictionary as well as one constant that holds all the players, both of these groups are referenced to a typealias that holds the Type
 typealias Player = [String: Any]
 typealias PlayerArray = [Player]
+//test commit
 
 let player1: Player = ["Name": "Joe Smith", "Height": 42.0, "isExperienced": true, "Guardian": "Jim and Jan Smith"]
 let player2: Player = ["Name": "Jill Tanner", "Height": 36.0, "isExperienced": true, "Guardian": "Clara Tanner"]
