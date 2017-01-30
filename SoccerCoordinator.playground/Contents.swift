@@ -83,7 +83,7 @@ var dragonsAverage: Double = 0
 var sharksAverage: Double = 0
 var raptorsAverage: Double = 0
 
-var preTeamsAverageHeight: Double = 0
+var averageHeightforTeam: Double = 0
 var teamsAverageHeight: Double = 0
 
 
@@ -105,19 +105,19 @@ sharkHeights
 raptorHeights
 
 // logic that will give the average height for a team
-func averageHeightFor(teamName: [Double]) -> Double {
-    preTeamsAverageHeight = 0
+func averageHeightFor(team: [Double]) -> Double {
+    averageHeightforTeam = 0
     
-    for playerHeights in teamName {
-        preTeamsAverageHeight += playerHeights
+    for playerHeights in team {
+        averageHeightforTeam += playerHeights
     }
     
-    teamsAverageHeight = preTeamsAverageHeight / Double(teamName.count)   // Note: more advanced section, divided by type of Double is new fo me.
+    teamsAverageHeight = averageHeightforTeam / Double(team.count)   // Note: more advanced section, divided by type of Double is new fo me.
     return teamsAverageHeight
 }
-raptorsAverage = averageHeightFor(teamName: raptorHeights)
-sharksAverage = averageHeightFor(teamName: sharkHeights)
-dragonsAverage = averageHeightFor(teamName: dragonHeights)
+raptorsAverage = averageHeightFor(team: raptorHeights)
+sharksAverage = averageHeightFor(team: sharkHeights)
+dragonsAverage = averageHeightFor(team: dragonHeights)
 
 print(raptorsAverage)
 //41.1666666666667
