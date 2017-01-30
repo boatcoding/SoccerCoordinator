@@ -112,7 +112,7 @@ func averageHeightFor(teamName: [Double]) -> Double {
         preTeamsAverageHeight += playerHeights
     }
     
-    teamsAverageHeight = preTeamsAverageHeight / Double(teamName.count)
+    teamsAverageHeight = preTeamsAverageHeight / Double(teamName.count)   // Note: more advanced section, divided by type of Double is new fo me.
     return teamsAverageHeight
 }
 raptorsAverage = averageHeightFor(teamName: raptorHeights)
