@@ -75,14 +75,6 @@ while counter > 0 {
     raptors.append(sortedInexperiencedPlayers.removeFirst())
     counter -= 3
 }
-
-
-
-
-
-
-
-
 var dragonHeights: [Double] = []
 var sharkHeights: [Double] = []
 var raptorHeights: [Double] = []
@@ -128,13 +120,19 @@ sharksAverage = averageHeightFor(teamName: sharkHeights)
 dragonsAverage = averageHeightFor(teamName: dragonHeights)
 
 print(raptorsAverage)
+//41.1666666666667
 raptorHeights
 print(sharksAverage)
+//42.5
 sharkHeights
 print(dragonsAverage)
+//43.6666666666667
 dragonHeights
-///huh, shoot, looks like the averages are off by more than 1.5
 
+///huh, shoot, looks like the averages are off by more than 1.5
+//dragons 43.666
+//sharks 42.5
+//raptors 41.666
 
 
 
