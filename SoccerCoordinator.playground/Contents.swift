@@ -147,18 +147,15 @@ let teamNames = [dragonsName,sharksName, raptorsName]
 
 
 
-func guardianLetterBy(teamName: [[String:Any]]) -> String {
+func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
     let team = "TEAMNAME"
     let practice = "TEAMPRACTICE"
-    // if guardianInfo is a collection of dragons {then assign to dragonsName && dragonsPractice} hmmmm.
-    let messageForGuardian = "Hi \(guardian), \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The little league soccer volunteers"
+    
+    // if is a collection of dragons {then assign to dragonsName && dragonsPractice} hmmmm.
+    print("Hi \(guardian), \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practice) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The little league soccer volunteers")
   }
-} return messageForGuardian
-
-
-
-
-guardianLetterBy(teamName: raptors)
+}
+guardianLetterBy(teamName: sharks)
