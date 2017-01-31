@@ -101,11 +101,9 @@ heightsCollectorBy(teamHeightBox: &raptorHeights, teamName: raptors)
 // logic that will give the average height for a team
 func averageHeightFor(team: [Double]) -> Double {
     averageHeightforTeam = 0
-    
     for playerHeights in team {
         averageHeightforTeam += playerHeights
     }
-    
     teamsAverageHeight = averageHeightforTeam / Double(team.count)   // Note: more advanced section, divided by type of Double is new fo me.
     return teamsAverageHeight
 }
@@ -129,9 +127,12 @@ func guardianLetterBy(teamName: [[String:Any]]) {
     let teamPractice = ""
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-//    if raptors {
-//        team = "The Raptors"
-//    }
+        for playersTeam in teamNames {
+            
+        }
+        for playersPracticeTime in teamNames {
+        
+        }
     let guardianDividerLine = ("_________________________________")
     let guardianMessage = "\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
     print(guardianMessage)
