@@ -125,7 +125,10 @@ let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
 let teamNames = [dragonsName,sharksName, raptorsName]
-var team = ""
+
+var dragonsGuardianLetter = ""
+var sharksGuardianLetter = ""
+var raptorsGuardianLetter = ""
 
 func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
