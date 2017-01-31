@@ -135,7 +135,9 @@ func guardianLetterBy(teamName: [[String:Any]]) {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
     let guardianDividerLine = ("_________________________________")
-    let guardianMessage = "Hi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
+    let guardianMessage = "\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
+    print(guardianMessage)
+    print(guardianDividerLine)
   }
-};   return guardianMessage
-guardianLetterBy(teamName: sharks)
+}
+guardianLetterBy(teamName: dragons)
