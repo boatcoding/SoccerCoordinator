@@ -47,14 +47,14 @@ for player in players {
 var sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Double) ?? 0
     let player2Height = (player2["Height"] as? Double) ?? 0
-    return player1Height < player2Height
+    return player1Height > player2Height
 }
 
 // variables holding the logic that sorts the inexperienced players based on height [Note: sorted() was more advanced ]
 var sortedInexperiencedPlayers = inexperiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Double) ?? 0
     let player2Height = (player2["Height"] as? Double) ?? 0
-    return player1Height > player2Height
+    return player1Height < player2Height
 }
 
 //logic that sorts the experienced players into three even teams
@@ -116,6 +116,15 @@ let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
 let practiceTimes = [dragonsPractice, sharksPractice, raptorsPractice]
+//for airportCode in airportCodes {
+//    switch airportCode {
+//    case "LGA": print("New York")
+//    case "LHR": print("London")
+//    case "CDG": print("Paris")
+//    case "HKG": print("Honk Kong")
+//    default: print("I don't know which airport that is in!")
+//    }
+//}
 let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
@@ -123,16 +132,11 @@ let teamNames = [dragonsName,sharksName, raptorsName]
 
 func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
-    let team = ""
-    let teamPractice = ""
+//    let team = ""
+//    let teamPractice = ""
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-        for playersTeam in teamNames {
-            
-        }
-        for playersPracticeTime in teamNames {
-        
-        }
+//    let team = for playersTeam in teamNames
     let guardianDividerLine = ("_________________________________")
     let guardianMessage = "\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
     print(guardianMessage)
