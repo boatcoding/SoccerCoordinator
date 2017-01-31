@@ -117,23 +117,37 @@ dragonsAverage = averageHeightFor(team: dragonHeights)
  
  When your complete code is run in a playground the letters should be visible in the right hand pane. If the code is run within an actual Xcode Project, the letters should be visible in the console.*/
 
-let dragonsPractice = "March 17, 1pm"
-let sharksPractice = "March 17, 3pm"
-let raptorsPractice = "March 18, 1pm"
+//let dragonsPractice = "March 17, 1pm"
+//let sharksPractice = "March 17, 3pm"
+//let raptorsPractice = "March 18, 1pm"
+
 
 
 for player in players {
     let guardian = player["Guardian"] as! String
     let player = player["Name"] as! String
-    
-    if dragons.contains(where: player) {
-        print("Dragons soccer team")
-    } else if player["Name"] is in sharks {
-        var playersTeamName = "Sharks soccer team"
-    } else {
-        var playersTeamName = "Raptors soccer team"
-    }
-    
+    // all this needs now is the TEAMname and PRACTICEtime.
     print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(playersTeamName)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
     print("_________________________________")
 }
+
+// the code below works but is DRY how can I clean this up by refactoring to one for-in loop?
+
+//for player in dragons {
+//        let guardian = player["Guardian"] as! String
+//        let player = player["Name"] as! String
+//        print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Dragons soccer team!!! The first team pracice will be held on March 17, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+//        print("_________________________________")
+//}
+//for player in sharks {
+//    let guardian = player["Guardian"] as! String
+//    let player = player["Name"] as! String
+//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Sharks soccer team!!! The first team pracice will be held on March 17, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+//    print("_________________________________")
+//}
+//for player in raptors {
+//    let guardian = player["Guardian"] as! String
+//    let player = player["Name"] as! String
+//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Raptors soccer team!!! The first team pracice will be held on March 17, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+//    print("_________________________________")
+//}
