@@ -113,40 +113,60 @@ sharksAverage = averageHeightFor(team: sharkHeights)
 dragonsAverage = averageHeightFor(team: dragonHeights)
 
 //Part 3
-//let dragonsPractice = "March 17, 1pm"
-//let sharksPractice = "March 17, 3pm"
-//let raptorsPractice = "March 18, 1pm"
+let dragonsPractice = "March 17, 1pm"
+let sharksPractice = "March 17, 3pm"
+let raptorsPractice = "March 18, 1pm"
+
+
+
 for player in players {
     let guardian = player["Guardian"] as! String
-    let player = player["Name"] as! String
-    let playersTeamName = "______"
-    let practiceTimes = "______"
+    let playersName = player["Name"] as! String
     
-    if dragons.contains(player) =! true {
+    let playerTeamName = ""
+    let practiceTimes = ""
+    
+    if dragons.contains(playersName) as? Bool == true {
         var playerTeamName = "Dragons soccer Team"
     } else {
         print("Not sure which team")
 }
+    print("\nHi \(guardian),\n\n \(playersName) has been officially accepted to the \(playerTeamName)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(playersName) on the team!\n\n Thanks,\n The little league soccer volunteers")
+    print("_________________________________")
+}
 
-//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(playersTeamName)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// the code below works but is DRY how can I clean this up by refactoring to the one for-in loop above?
+//for player in dragons {
+//        let guardian = player["Guardian"] as! String
+//        let player = player["Name"] as! String
+//        print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Dragons soccer team!!! The first team pracice will be held on March 17, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+//        print("_________________________________")
+//}
+//for player in sharks {
+//    let guardian = player["Guardian"] as! String
+//    let player = player["Name"] as! String
+//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Sharks soccer team!!! The first team pracice will be held on March 17, 3pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
 //    print("_________________________________")
 //}
-// the code below works but is DRY how can I clean this up by refactoring to the one for-in loop above?
-for player in dragons {
-        let guardian = player["Guardian"] as! String
-        let player = player["Name"] as! String
-        print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Dragons soccer team!!! The first team pracice will be held on March 17, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
-        print("_________________________________")
-}
-for player in sharks {
-    let guardian = player["Guardian"] as! String
-    let player = player["Name"] as! String
-    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Sharks soccer team!!! The first team pracice will be held on March 17, 3pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
-    print("_________________________________")
-}
-for player in raptors {
-    let guardian = player["Guardian"] as! String
-    let player = player["Name"] as! String
-    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Raptors soccer team!!! The first team pracice will be held on March 18, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
-    print("_________________________________")
-}
+//for player in raptors {
+//    let guardian = player["Guardian"] as! String
+//    let player = player["Name"] as! String
+//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Raptors soccer team!!! The first team pracice will be held on March 18, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+//    print("_________________________________")
+//}
