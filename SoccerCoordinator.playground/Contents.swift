@@ -6,7 +6,7 @@ typealias PlayerArray = [Player]
 
 let player1: Player = ["Name": "Joe Smith", "Height": 42.0, "isExperienced": true, "Guardian": "Jim and Jan Smith"]
 let player2: Player = ["Name": "Jill Tanner", "Height": 36.0, "isExperienced": true, "Guardian": "Clara Tanner"]
-let player3: Player = ["Name": "Bill Bonn", "Height": 43.0, "isExperienced": true, "Guardian": "Sara and Jenny Bon"]
+let player3: Player = ["Name": "Bill Bonn", "Height": 43.0, "isExperienced": true, "Guardian": "Sara and Jenny Bonn"]
 let player4: Player = ["Name": "Eva Gordon", "Height": 45.0, "isExperienced": false, "Guardian": "Wendy and Mike Gordon"]
 let player5: Player = ["Name": "Matt Gill", "Height": 40.0, "isExperienced": false, "Guardian": "Charles and Sylvia Gill"]
 let player6: Player = ["Name": "Kimmy Stein", "Height": 41.0, "isExperienced": false, "Guardian": "Bill and Hillary Stein"]
@@ -129,8 +129,6 @@ let teamNames = [dragonsName,sharksName, raptorsName]
 for player in players {
     let guardian = player["Guardian"] as! String
     let player = player["Name"] as! String
-    let playersTeam =
-    print("_________________________________")
-    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+        print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+        print("_________________________________")
 }
-
