@@ -151,17 +151,8 @@ func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-    var team = if teamName == dragons {
-        team = dragonsName,
-        practiceTimes = dragonsPractice
-    } else if teamName == sharks {
-        team = sharksName,
-        practiceTimes = sharksPractice
-    } else {
-        team = raptorsName;,
-        practiceTimes = raptorsPractice
-    }
-    print("Hi \(guardian), \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team! Thanks, The little league soccer volunteers")
+   print("_________________________________")
+    print("Hi \(guardian),\n\n \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
   }
 }
 guardianLetterBy(teamName: sharks)
