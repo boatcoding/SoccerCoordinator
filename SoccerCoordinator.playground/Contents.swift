@@ -121,12 +121,13 @@ let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
 
+
 for player in players {
     let guardian = player["Guardian"] as! String
     let player = player["Name"] as! String
     
-    if player["Name"] is in dragons {
-        var playersTeamName = "Dragons soccer team"
+    if dragons.contains(where: player) {
+        print("Dragons soccer team")
     } else if player["Name"] is in sharks {
         var playersTeamName = "Sharks soccer team"
     } else {
