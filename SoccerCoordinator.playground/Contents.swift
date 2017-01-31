@@ -100,10 +100,6 @@ heightsCollectorBy(teamHeightBox: &dragonHeights, teamName: dragons)
 heightsCollectorBy(teamHeightBox: &sharkHeights, teamName: sharks)
 heightsCollectorBy(teamHeightBox: &raptorHeights, teamName: raptors)
 
-dragonHeights
-sharkHeights
-raptorHeights
-
 // logic that will give the average height for a team
 func averageHeightFor(team: [Double]) -> Double {
     averageHeightforTeam = 0
@@ -119,21 +115,6 @@ raptorsAverage = averageHeightFor(team: raptorHeights)
 sharksAverage = averageHeightFor(team: sharkHeights)
 dragonsAverage = averageHeightFor(team: dragonHeights)
 
-//print(raptorsAverage)
-//41.1666666666667
-raptorHeights
-//print(sharksAverage)
-//42.5
-sharkHeights
-//print(dragonsAverage)
-//43.6666666666667
-dragonHeights
-
-///huh, shoot, looks like the averages are off by more than 1.5
-//dragons 43.666
-//sharks 42.5
-//raptors 41.666
-
 //Part 3
 // to be refactored...
 let dragonsPractice = "March 17, 1pm"
@@ -146,13 +127,11 @@ let raptorsName = "Raptors soccer team"
 let teamNames = [dragonsName,sharksName, raptorsName]
 var team = ""
 
-
 func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-   print("_________________________________")
+    print("_________________________________")
     print("Hi \(guardian),\n\n \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
   }
 }
-guardianLetterBy(teamName: sharks)
