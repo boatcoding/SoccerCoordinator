@@ -30,7 +30,6 @@ let players: PlayerArray = [player1, player2, player3, player4, player5, player6
 var dragons = [[String: Any]]()
 var sharks = [[String: Any]]()
 var raptors = [[String: Any]]()
-let leageue = [dragons, sharks, raptors]
 
 // variables holding the players who have expereince with soccer vs those that do not
 var experiencedPlayers = [[String: Any]]()
@@ -86,7 +85,6 @@ var raptorsAverage: Double = 0
 var averageHeightforTeam: Double = 0
 var teamsAverageHeight: Double = 0
 
-
 //Logic that collects all the heights for a team and stores them in an array of type Double. NOTE: 'inout' is more advanced for me.
 func heightsCollectorBy(teamHeightBox: inout [Double], teamName: [[String:Any]]) -> [Double] {
     for player in teamName {
@@ -116,7 +114,6 @@ sharksAverage = averageHeightFor(team: sharkHeights)
 dragonsAverage = averageHeightFor(team: dragonHeights)
 
 //Part 3
-// to be refactored...
 let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
@@ -125,15 +122,16 @@ let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
 let teamNames = [dragonsName,sharksName, raptorsName]
-//
-//var dragonsGuardianLetter = ""
-//var sharksGuardianLetter = ""
-var raptorsGuardianLetter = [[String: Any]]()
 
 func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
+    let team = ""
+    let teamPractice = ""
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
+    if teamName == raptors {
+        team = "The Raptors"
+    }
     let guardianDividerLine = ("_________________________________")
     let guardianMessage = "\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
     print(guardianMessage)
