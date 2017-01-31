@@ -116,17 +116,18 @@ dragonsAverage = averageHeightFor(team: dragonHeights)
 //let dragonsPractice = "March 17, 1pm"
 //let sharksPractice = "March 17, 3pm"
 //let raptorsPractice = "March 18, 1pm"
-//for player in players {
-//    let guardian = player["Guardian"] as! String
-//    let player = player["Name"] as! String
-//    let playersTeamName = "______"
-//    let practiceTimes = "______"
-//    // all this needs now is the TEAMname and PRACTICEtime, d
-    if dragons.players == true {
-   var playerTeamName = "Dragons soccer Team"
+for player in players {
+    let guardian = player["Guardian"] as! String
+    let player = player["Name"] as! String
+    let playersTeamName = "______"
+    let practiceTimes = "______"
+    
+    if dragons.contains(player) =! true {
+        var playerTeamName = "Dragons soccer Team"
     } else {
         print("Not sure which team")
 }
+
 //    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(playersTeamName)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
 //    print("_________________________________")
 //}
