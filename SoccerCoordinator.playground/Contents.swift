@@ -125,16 +125,17 @@ let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
 let teamNames = [dragonsName,sharksName, raptorsName]
-
-var dragonsGuardianLetter = ""
-var sharksGuardianLetter = ""
-var raptorsGuardianLetter = ""
+//
+//var dragonsGuardianLetter = ""
+//var sharksGuardianLetter = ""
+var raptorsGuardianLetter = [[String: Any]]()
 
 func guardianLetterBy(teamName: [[String:Any]]) {
   for guardianInfo in teamName {
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-    print("_________________________________")
-    print("Hi \(guardian),\n\n \(player) has been officially accepted to the \(team)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
+    let guardianDividerLine = ("_________________________________")
+    let guardianMessage = "Hi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
   }
-}
+};   return guardianMessage
+guardianLetterBy(teamName: sharks)
