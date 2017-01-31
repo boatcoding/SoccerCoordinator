@@ -31,6 +31,7 @@ var dragons = [[String: Any]]()
 var sharks = [[String: Any]]()
 var raptors = [[String: Any]]()
 
+
 // variables holding the players who have expereince with soccer vs those that do not
 var experiencedPlayers = [[String: Any]]()
 var inexperiencedPlayers = [[String: Any]]()
@@ -112,35 +113,24 @@ sharksAverage = averageHeightFor(team: sharkHeights)
 dragonsAverage = averageHeightFor(team: dragonHeights)
 
 //Part 3
+/*Part 3: Create logic that iterates through all three teams of players and generates a personalized letter to the guardians, letting them know which team their child has been placed on and when they should attend their first team team practice. As long as you provide the necessary information (player name, team name, guardians’ names, practice date/time), feel free to have fun with the content of the letter. The team practice dates/times are as follows: Dragons - March 17, 1pm, Sharks - March 17, 3pm, Raptors - March 18, 1pm
+ 
+ When your complete code is run in a playground the letters should be visible in the right hand pane. If the code is run within an actual Xcode Project, the letters should be visible in the console.*/
+
 let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
 let practiceTimes = [dragonsPractice, sharksPractice, raptorsPractice]
-//for airportCode in airportCodes {
-//    switch airportCode {
-//    case "LGA": print("New York")
-//    case "LHR": print("London")
-//    case "CDG": print("Paris")
-//    case "HKG": print("Honk Kong")
-//    default: print("I don't know which airport that is in!")
-//    }
-//}
 let dragonsName = "Dragons soccer team"
 let sharksName = "Sharks soccer team"
 let raptorsName = "Raptors soccer team"
 let teamNames = [dragonsName,sharksName, raptorsName]
 
-func guardianLetterBy(teamName: [[String:Any]]) {
-  for guardianInfo in teamName {
-//    let team = ""
-//    let teamPractice = ""
-    let guardian = guardianInfo["Guardian"] as! String
-    let player = guardianInfo["Name"] as! String
-//    let team = for playersTeam in teamNames
-    let guardianDividerLine = ("_________________________________")
-    let guardianMessage = "\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
-    print(guardianMessage)
-    print(guardianDividerLine)
-  }
+for player in players {
+    let guardian = player["Guardian"] as! String
+    let player = player["Name"] as! String
+    let playersTeam =
+    print("_________________________________")
+    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
 }
-guardianLetterBy(teamName: dragons)
+
