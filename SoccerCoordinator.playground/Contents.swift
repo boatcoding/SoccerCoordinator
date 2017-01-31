@@ -130,7 +130,7 @@ dragonsAverage = averageHeightFor(team: dragonHeights)
 //    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the \(playersTeamName)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
 //    print("_________________________________")
 //}
-// the code below works but is DRY how can I clean this up by refactoring to one for-in loop above?e
+// the code below works but is DRY how can I clean this up by refactoring to one for-in loop above?
 for player in dragons {
         let guardian = player["Guardian"] as! String
         let player = player["Name"] as! String
