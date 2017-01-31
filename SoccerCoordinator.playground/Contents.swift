@@ -48,7 +48,7 @@ for player in players {
 var sortedExperiencedPlayers = experiencedPlayers.sorted { (player1, player2) -> Bool in
     let player1Height = (player1["Height"] as? Double) ?? 0
     let player2Height = (player2["Height"] as? Double) ?? 0
-    return player1Height > player2Height
+    return player1Height < player2Height
 }
 
 // variables holding the logic that sorts the inexperienced players based on height [Note: sorted() was more advanced ]
