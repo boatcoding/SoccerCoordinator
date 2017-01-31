@@ -129,9 +129,9 @@ func guardianLetterBy(teamName: [[String:Any]]) {
     let teamPractice = ""
     let guardian = guardianInfo["Guardian"] as! String
     let player = guardianInfo["Name"] as! String
-    if teamName == raptors {
-        team = "The Raptors"
-    }
+//    if raptors {
+//        team = "The Raptors"
+//    }
     let guardianDividerLine = ("_________________________________")
     let guardianMessage = "\nHi \(guardian),\n\n \(player) has been officially accepted to the \(teamNames)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers"
     print(guardianMessage)
