@@ -2,7 +2,7 @@
 // individual player constants are stored into their own dictionary as well as one constant that holds all the players, both of these groups are referenced to a typealias that holds the Type
 typealias Player = [String: Any]
 typealias PlayerArray = [Player]
-//test commit
+//test commits
 
 let player1: Player = ["Name": "Joe Smith", "Height": 42.0, "isExperienced": true, "Guardian": "Jim and Jan Smith"]
 let player2: Player = ["Name": "Jill Tanner", "Height": 36.0, "isExperienced": true, "Guardian": "Clara Tanner"]
@@ -112,74 +112,22 @@ raptorsAverage = averageHeightFor(team: raptorHeights)
 sharksAverage = averageHeightFor(team: sharkHeights)
 dragonsAverage = averageHeightFor(team: dragonHeights)
 
-
-
-
-
-
-
-
-
-
-
-
-
 //Part 3
 
 let dragonsPractice = "March 17, 1pm"
 let sharksPractice = "March 17, 3pm"
 let raptorsPractice = "March 18, 1pm"
 
+let dragonsTeamName = "Dragons soccer team"
+let sharksTeamName = "Sharks soccer team"
+let raptorsTeamName = "Raptors soccer team"
+var league = [dragons, sharks, raptors]
 
-
-for player in players {
-    let guardian = player["Guardian"] as! String
-    let playersName = player["Name"] as! String
-    
-    let playerTeamName = "PLAYERteamNAME"
-    let practiceTimes = "PRATICEtimes"
-    
-//    if dragons.contains(playersName) as? Bool == true {
-//        var playerTeamName = "Dragons soccer Team"
-//    } else {
-//        print("Not sure which team")
-//}
-    print("\nHi \(guardian),\n\n \(playersName) has been officially accepted to the \(playerTeamName)!!! The first team pracice will be held on \(practiceTimes) at St. Johns Cathedral park in Portland. We look forward to having \(playersName) on the team!\n\n Thanks,\n The little league soccer volunteers")
-    print("_________________________________")
+for player in league {
+    var guardian = dragons.player["Guardian"] as! String
+    var playersName = player["Name"] as! String
+        var practiceTime = "ADD PRACTICE TIME"
+        var playerTeamName = "TEAMNAME"
+    var testing = ("\nHi \(guardian),\n\n \(playersName) has been officially accepted to the \(playerTeamName)!!! The first team pracice will be held on \(practiceTime) at St. Johns Cathedral park in Portland. We look forward to having \(playersName) on the team!\n\n Thanks,\n The little league soccer volunteers")
+    print(testing)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// the code below works but is DRY how can I clean this up by refactoring to the one for-in loop above?
-//for player in dragons {
-//        let guardian = player["Guardian"] as! String
-//        let player = player["Name"] as! String
-//        print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Dragons soccer team!!! The first team pracice will be held on March 17, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
-//        print("_________________________________")
-//}
-//for player in sharks {
-//    let guardian = player["Guardian"] as! String
-//    let player = player["Name"] as! String
-//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Sharks soccer team!!! The first team pracice will be held on March 17, 3pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
-//    print("_________________________________")
-//}
-//for player in raptors {
-//    let guardian = player["Guardian"] as! String
-//    let player = player["Name"] as! String
-//    print("\nHi \(guardian),\n\n \(player) has been officially accepted to the Raptors soccer team!!! The first team pracice will be held on March 18, 1pm at St. Johns Cathedral park in Portland. We look forward to having \(player) on the team!\n\n Thanks,\n The little league soccer volunteers")
-//    print("_________________________________")
-//}
