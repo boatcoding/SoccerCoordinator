@@ -121,13 +121,12 @@ let raptorsPractice = "March 18, 1pm"
 let dragonsTeamName = "Dragons soccer team"
 let sharksTeamName = "Sharks soccer team"
 let raptorsTeamName = "Raptors soccer team"
-var league = [dragons, sharks, raptors]
 
-for player in league {
-    var guardian = dragons.player["Guardian"] as! String
+for player in players {
+    var guardian = player["Guardian"] as! String
     var playersName = player["Name"] as! String
         var practiceTime = "ADD PRACTICE TIME"
         var playerTeamName = "TEAMNAME"
-    var testing = ("\nHi \(guardian),\n\n \(playersName) has been officially accepted to the \(playerTeamName)!!! The first team pracice will be held on \(practiceTime) at St. Johns Cathedral park in Portland. We look forward to having \(playersName) on the team!\n\n Thanks,\n The little league soccer volunteers")
-    print(testing)
+    var message = ("\nHi \(guardian),\n\n \(playersName) has been officially accepted to the \(playerTeamName)!!! The first team pracice will be held on \(practiceTime) at St. Johns Cathedral park in Portland. We look forward to having \(playersName) on the team!\n\n Thanks,\n The little league soccer volunteers")
+    print(message)
 }
